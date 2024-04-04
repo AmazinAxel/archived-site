@@ -1,0 +1,1 @@
+~ Added a new download information menu for when an item is downloaded. It also gives a link option if the browser doesn't support automatic downloads.

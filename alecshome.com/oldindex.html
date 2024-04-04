@@ -1,0 +1,291 @@
+<!-- HTML for my personal website at https://alecshome.com: -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <!-- meta for SEO and normal boring web stuff -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> Alec's Homepage </title>
+        <meta name="description" content="Welcome to my private home on the web! You should visit my actual site at AmazinAxel.com." />
+        <!-- <link rel="stylesheet" type="text/css" href="https://amazinaxel.com/style.css" /> -->
+        <link rel="canonical" href="https://amazinaxel.com/" />
+        <meta name="author" content="Alec" />
+        <meta name="copyright" content="Alec" />
+        <meta property="og:locale" content="en, en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Alec&#039;s Home" />
+        <meta property="og:description" content="Alec&#039;s Home is my personal home on the web!" />
+        <meta property="og:url" content="https://alecshome.com/" />
+        <meta property="og:site_name" content="Alec&#039;s Home" />
+        <meta property="og:image" content="https://alecshome.com/favicon/favicon.png" />
+		<style>
+			body { 
+				margin: 0;
+				font-family: sans-serif; 
+				margin: auto;
+				max-width: 1500px; 
+			}
+			* { box-sizing: border-box; }
+
+			.header {
+				background-color: #f1f1f1;
+				padding: 20px;
+				position: sticky;
+				z-index: 1;
+				top: 0;
+				border-radius: 0 0 30px 30px; 
+				box-shadow: #c0c0c0 0 0 10px 0;
+			}
+
+			.header a {
+				color: black;
+				padding: 12px;
+				text-decoration: none;
+				font-size: 18px; 
+				line-height: 25px;
+				border-radius: 10px;
+				transition: background-color .2s;
+			}
+
+			.header a.logo { font-size: 25px; font-weight: bold; margin-left: 100px; }
+
+			.header img {
+				width: 90px;
+				position: absolute;
+				top: -11px;
+			}
+
+			.header img:hover { cursor: pointer; }
+
+
+			a:hover { background-color: #ddd; }
+
+			a.current {
+				background-color: dodgerblue;
+				color: white;
+			}
+
+			a.current:hover { background-color: #0353e6; }
+
+			a:active { background-color: #c6c4c4; }
+
+			.row { padding: 20px; }
+
+			.header a.joinnow { background-color: green; color: white; }
+
+			.header a.joinnow:hover { background-color: #65bc06; }
+
+			.header-right { float: right; }
+
+			.column { float: left; padding: 10px; width: 25%; margin-bottom: 10px;}
+			.column2 { float: left; padding: 10px; width: 50%; }
+
+			.row:after { content: ""; display: table; clear: both; }
+
+			.joinbox {
+				margin: 20px;
+				background-color: #f1f1f1;
+				padding: 20px;
+				border-radius: 30px;
+			}
+
+			li { text-align: left; }
+
+			.notice {
+				background-color: #ffd9d9;
+				border-radius: 30px;
+				box-shadow: #c0c0c0 0 0 10px 0;
+				padding: 1px;
+				margin: 30px 30px 0 30px;
+			}
+			.notice a:hover { background-color: #ffbaba; }
+			.notice a:active { background-color: #faabab; }
+			.notice a { padding: 1px 8px 1px 8px; margin-left: -8px; }
+
+			label.open.joinnow.bottom {
+				display: unset;
+			}
+
+			.footer {
+				background-color: #f1f1f1;
+				padding: 10px;
+				text-align: center;
+				border-radius: 30px 30px 0 0;
+			}
+
+			hr {
+				margin: 30px;
+				margin-block-start: 0.5em;
+				margin-block-end: 0.5em;
+				border-style: solid;
+				border-width: 1px;
+				box-shadow: #c0c0c0 0 0 10px 0;
+			}
+
+			a {
+				text-decoration: none;
+				color: #000;
+				padding: 10px;
+				border-radius: 10px;
+				transition: background-color .2s;
+
+			}
+
+			video {
+				width: 977px;
+				transform: translateX(-50%);
+				left: 50%;
+				height: 550px;
+				position: relative;
+				background-color: #000;
+				box-shadow: #6d6d6d 0px 3px 20px 2px;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+
+			/* join now popup */
+			.pop .popupbackground { /* modal styling */
+				z-index: 1;
+				opacity: 0;
+				visibility: hidden;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				left: 0;
+				bottom: 0;
+				transition: all 250ms ease-in-out;
+			}
+
+			.pop .modal { /* modal styling */
+				transform: translate(-50%, -50%) scale(0.75);
+				top: 50%;
+				left: 50%;
+				width: 77%;
+				background: white;
+				position: absolute;
+				padding: 20px;
+				text-align: center;
+				border-radius: 20px;
+				box-shadow: 0 1px 3px 0 #c3c3c3;
+				padding: 45px 15px 35px 15px;
+			}
+			@media (max-width: 640px) { .pop .modal { width: -webkit-fill-available; overflow: scroll; height: 90%; } } /* modal fill screen */ 
+
+			.btn-close{ /* close button style */
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 25px;
+				width: 60px;
+				transition: background-color 0.3s, box-shadow 0.3s;
+				margin: 10px;
+				border-radius: 20px;
+				background-color: #fff;
+				box-shadow: 0 1px 3px 0 #c3c3c3;
+				line-height: 25px;
+				cursor: pointer;
+			}
+
+			.pop input { display: none; } /* hide button */
+			.pop input:checked + .popupbackground { opacity: 1; visibility: visible; } /* transition and open */
+			.pop input:checked + .popupbackground .modal { transform: translate(-50%, -50%) scale(1); transition: all 300ms cubic-bezier(0.15, -0.15, 0.15, 1.3) } /* animate modal */
+			.pop input:checked + .popupbackground label { visibility: visible;  } /* make close button appear */
+			.pop input:checked + .popupbackground label:hover { box-shadow: 0 0 10px 1px #ddd; background-color: #f8f8f8; } /* close button hover */
+			.pop input:checked + .popupbackground label:active { background-color: #eeeeee; box-shadow: 0 1px 3px 0 #c3c3c3; } /* close button clicked */
+			.modal { transform: translate(-50%, -50%) scale(1); transition: all 350ms cubic-bezier(0, 0, 0.15, 1.3); } /* modal transition out */
+
+
+			label.open.joinnow {
+				background-color: green;
+				color: white;
+				padding: 12px;
+				border-radius: 10px;
+				transition: background-color .2s;
+			}
+			label.open.joinnow:hover { background-color: #65bc06; cursor: pointer; } /* label hover */ 
+
+
+			@media (max-width: 1000px) { .column { width: 50%; } }
+
+			@media (max-width: 720px) { .column { width: 100%; } }
+
+			@media (max-width: 730px) {
+				.header a, label.open.joinnow {
+					float: none;
+					display: block;
+					text-align: left;
+					margin-left: 0;
+					margin-bottom: 5px;
+					width: 49%;
+				}
+
+				.header-right { float: none; }
+				.header {position: static;}
+				.header a.logo { 
+					line-height: 25px;
+					margin-bottom: 5px;
+					width: 174px;
+					margin-top: -13px;
+				}
+				a.home { float: right; }
+				a.nextgame { float: right; }
+			}
+
+			@media (max-width: 430px) {
+				.header a, label.open.joinnow {
+					width: -webkit-fill-available!important;
+				}
+				a.home { float: none; }
+				a.nextgame { float: none; }
+
+			}
+
+		</style>
+	</head>
+	<!-- main website content -->
+	<body>
+		<div class="header">
+			<!-- <img src="https://alecshome.com/WizardryKB-icon.png"> -->
+			<a href="https://amazinaxel.com/WizardryKB" class="logo">Alec's Home</a>
+			<div class="header-right">
+				<a class="current home" href="https://alecshome.com/">Home</a>
+				<a class="wiki" href="#the-login-page-is-not-ready-yet">Login</a>
+				<a class="nextgame" href="https://amazinaxel.com">Main Site</a>
+				<label for="1" class="open joinnow">Projects</label>
+				<div class="pop">
+					<input type="checkbox" id="1">
+					<div class="popupbackground">
+						<div class="modal">
+							<h1>Please go to my main site at <a href="https://amazinaxel.com/projects" style="position: relative; top: -4px;">https://amazinaxel.com/projects</a> to view all of my projects.</h1>
+							<label class="btn-close" for="1">Close</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- content and sidebar -->
+		<div class="row">
+			<div class="leftcolumn">
+				<!-- main content -->
+				<h1> What is this place??</h1>
+				<p>This is my private site, also known as my "home" on the internet :)</p>
+				<p> This site is mainly for my personal use only, however I do allow restricted access to some APIs and services.</p>
+				<h1> What is this place used for? </h1>
+				<p> This site and domain are used for my own personal projects and my personal things. My <a href="https://amazinaxel.com">AmazinAxel.com page</a> is a commercial site and is not as personal.</p>
+				<h1> What's going to happen in the future with AmazinAxel.com and AlecsHome.com? </h1>
+				<p> In the future, AmazinAxel.com is going to become more of a commercial site for all my projects, advertisements, and most public-facing web content. AlecsHome.com will slowly gain more content but will always remain more personal than AmazinAxel.com. AmazinAxel.com will continue to
+						host any and all public APIs and won't be switched over to AlecsHome.com, unless the API becomes private or deprecated. There currently aren't any plans in the near future to do any large overhaul with AmazinAxel.com and AlecsHome.com, other than a few restructuring changes and possibly moving a couple pages. </p>
+				<h1> Why did you create this site?</h1>
+				<p> I created this site and registered this domain because I felt like my AmazinAxel.com page was becoming too commercial and was losing that "personal" vibe, especially after I felt pressured to switch over to a more professional format after recieving various different emails from
+					people who talked about my website, and I knew that I couldn't be showing off projects and look like I have 2nd grade grammar. After this, I knew I had to make a site where I could offload some of my less commercial stuff onto here, without it affecting my reputation and making me look like I'm in 2nd grade. This site will renmain ad-free, privacy-focused, secure, and fast.
+				</p>
+			</div>
+			<!-- sidebar -->
+		</div>
+		<!-- footer copyright -->
+		<footer>
+			<p class="editable">Copyright © AmazinAxel (Alec) 2022 • <a href="https://amazinaxel.com/privacy-policy.html">Privacy / Cookies</a></p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+- Adding images to the bobablog is very glitchy and can sometimes add the wrong image, so fix that and the copy image function isglitched becuase it doesnt give you the correct markup (the "" are supposed to be after the url and surrounds the text description!!!!!
+- make doggo work on website
+- Add the to do list animations to the reminders page because it looks jank rn
+- Add the projects feature that allows me to manage and edit projects, and it appears on AmazinAxel as a list of all of my current projects and also features notes, a todo list, etc
+add feature that detects when you are not looking at page or haven’t refreshed the page in a long time and then give u a pop up saying to refresh, also checks login status
+When you save a post in SWR or Blogging, show the post like it's been added by adding a card to the list of posts that contains the new posts text to add polish &amp; don't have to refresh the page to see the text in the list
+- !!! Move the bobablog site and admin panel to AmazinAxel.com!
+Add ability to do more stuff on AmazinAxel domain!
+- work on adding the announcements thing on the top part to get notified when you got logged out or when there is no wifi
+Work on adding the settings features
+Polls! (AlecsCP)
+New private blog system (AlecsCP)
+RPi Sync (AlecsCP)

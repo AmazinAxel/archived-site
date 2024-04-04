@@ -1,0 +1,116 @@
+/* 
+ /-----\   CSS Styles for my control personal panel, AlecsCP
+{ C S S }  Copyright (c) 2021 - 2023 AmazinAxel (Alec) @ AlecsHome.com
+ \_____/   All Rights Reserved. For use only by AmazinAxel / Alec. 
+
+These styles are mainly used by the homepage of AlecsCP.               */
+
+
+/* main body style */
+body { max-width: unset; padding: 10px; }
+
+/* card header style */
+h2 { margin: 0px 0 15px 0; }
+
+/* if the page only has 1 row of stuff, make it full width */
+.full { display: revert; }
+
+/* active link */ 
+.active { background-color: #f6f6fd; box-shadow: 0 0 6px 0 #ddd; }
+
+/* iframe.styled {
+    resize: vertical;
+    border-radius: 10px; 
+    height: 300px; 
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+} */
+
+/* main page layout */
+.content {
+    margin-left: 130px;
+    margin-right: 84px;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+	align-items: center;
+}
+
+/* full line single card */
+.card.oneline { margin-left: 162px; margin-right: 116px; }
+
+/* card style */
+.card{ margin: 10px; }
+
+/***** sidebar styles *****/
+
+/* left sidebar style */
+.sidebarleft { width: 135px; }
+
+/* right sidebar style */
+.sidebarright { right: 0; width: 100px; }
+
+/* left & right sidebar style */
+.sidebar {
+    top: 0;
+	margin: 10px 10px 10px 0px;
+    height: 97%;
+    position: fixed;
+}
+
+/* sidebar link */
+.sidebar a { float: none; }
+ 
+/***** responsiveness *****/
+
+@media (max-width: 900px){
+    /* sidebar responsiveness (small laptop level) 
+       moves right sidebar to bottom            */
+    .sidebarright a { float: left; }
+    .sidebarright {
+		width: unset;
+		position: unset;
+		margin-left: 145px;
+		display: flex;
+		justify-content: center;
+		height: max-content;
+    }
+    .content { margin-right: unset!important; padding: 0 0 0 16px; }
+    .card.oneline { margin-right: 10px; margin-left: 156px; }
+}
+
+@media (max-width: 800px) {
+	/* go to top when the screen is tablet level */
+    .sidebar { width: 100%; margin: 0; }
+    /* fix bottom sidebar overlaying glitch */
+    .sidebarright { margin-top: 5px; }
+	/* sidebar text align */
+    .sidebarleft a {float: left;}
+	.sidebar { height: max-content; }
+    
+	/* make layout full width */
+    .content {
+		margin: 0!important;
+		padding: 0;
+		display: revert;
+	}
+	.card.oneline { margin: 0; display: revert; }
+
+	/* fix sidebar glitch */
+	.sidebarleft {
+		position: unset;
+		display: flex;
+		margin-bottom: 10px;
+		justify-content: center; }
+}
+
+@media (max-width: 500px) {
+	/* stack sidebar on small (phone) screens */
+	.mobilehide { display: none; }
+    .sidebar a { float: none; }
+	.sidebar { display: revert; }
+}
+
+/* fix the sidebar bug where it stacks on top of each other, makes the sidebar not stick when scrolling tho */
+aside .card { position: unset; }
+
+/* end of AlecsCP styles */

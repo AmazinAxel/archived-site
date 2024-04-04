@@ -1,0 +1,221 @@
+/* 
+ /-----\   CSS Styles for my control personal panel, AlecsCP
+{ C S S }  Copyright (c) 2021 - 2023 AmazinAxel (Alec) @ AlecsHome.com
+ \_____/   All Rights Reserved. For use only by AmazinAxel / Alec. 
+
+These styles are used in all pages of AlecsCP.                         */ 
+
+/* Fix header button margin */
+h2 { margin-top: 0; }
+
+/* fix the sidebar bug where it stacks on top of each other, makes the sidebar not stick when scrolling though */
+aside .card { position: unset!important; }
+
+.upload { position: relative; top: 12px; }
+
+/* Styling for groups of buttons within a card */
+.buttons { margin-right: -10px; float: right; }
+
+/* Back buttons styled as large buttons */
+.headerbtn { display: block; font-weight: bold; }
+
+.large.button { margin-bottom: unset; }
+
+h2:not(.button) { margin: revert; }
+
+/* Input fields */
+input {
+     padding: 8px;
+     border-radius: 10px;
+     background-color: #f1f1fc;
+     box-shadow: 0 1px 3px 0 #c3c3c3;
+     border: 0px;
+     background-color: #f6f6fd;
+     box-shadow: 0 0 6px 0 #ddd;
+     transition: box-shadow 0.3s;
+}
+ textarea:focus-visible {
+     outline: 0;
+     transition: background-color 0.3s, box-shadow 0.3s;
+     box-shadow: rgb(221 221 221) 0px 0px 11px 1px;
+}
+ input:focus-visible {
+     outline: 0;
+     transition: background-color 0.3s, box-shadow 0.3s;
+     box-shadow: rgb(221 221 221) 0px 0px 11px 1px;
+}
+ textarea {
+     padding: 8px;
+     margin-top: 5px;
+     border-radius: 10px;
+     border: 0px;
+     background-color: rgb(246, 246, 253);
+     box-shadow: 0 1px 3px 0 #c3c3c3;
+     height: 113px;
+	 width: -webkit-fill-available;
+     transition: box-shadow 0.3s;
+     resize: vertical;
+     width: -webkit-fill-available;
+}
+
+/* CHECKBOX STYLING */
+input[type="checkbox"] {
+     cursor: pointer;
+     margin-left: 5px;
+     box-shadow: 0 1px 3px 0 #c3c3c3;
+}
+.checked { text-decoration: line-through; }
+
+/* The checkbox container */
+ .container {
+     position: relative;
+     padding-left: 35px;
+     cursor: pointer;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+}
+/* Hide the browser's default checkbox */
+ .container input {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+     height: 0;
+     width: 0;
+}
+/* Create a custom checkbox */
+ .checkmark {
+    position: absolute;
+    top: -10px;
+    left: -8px;
+    height: 40px;
+    width: 40px;
+    transition: background-color .3s, box-shadow .3s;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+    background-color: #f6f6fd;
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark { box-shadow: 0 0 10px 1px #ddd; }
+.container input:checked ~ .checkmark:hover { box-shadow: 0 0 10px 1px #ddd; }
+.container input:checked ~ .checkmark:active { background-color: #f1f1fc; box-shadow: 0 1px 3px 0 #c3c3c3; }
+.container:active input ~ .checkmark { background-color: #f1f1fc; box-shadow: 0 1px 3px 0 #c3c3c3; }
+.container input:checked ~ .checkmark {
+     transition: background-color .3s, box-shadow .3s;
+     border-radius: 10px;
+     box-shadow: 0 1px 3px 0 #c3c3c3;
+     background-color: #f6f6fd;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+     content: "";
+     position: absolute;
+     display: none;
+}
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after { display: block; }
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+	left: 15px;
+    top: 8px;
+    width: 10px;
+    height: 20px;
+    border: solid #444;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* h3 styling */
+h3 {
+     display: unset;
+     position: absolute;
+     font-weight: normal;
+     font-size: 1.2em;
+     margin: -2px 0 0 5px;
+}
+
+aside .card { max-width: 200px; }
+ 
+/* leftside cards */
+.card.left{ text-align: left; }
+
+/* Animations */
+.show { animation: show 1s cubic-bezier(0, 0.7, 0, 1); }
+.hide { animation: hide 1s cubic-bezier(0, 0.7, 0, 1); }
+
+@keyframes hide { 0% { opacity: 1; top: 0; } 45% { top: -50px; } 100% { opacity: 0; } }
+@keyframes show { 0% { opacity: 0; top: -50px; } 45% { top: 0; } 100% { opacity: 1; } }
+
+/* h3.default { 
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold; } */
+
+::-webkit-scrollbar { display: none; } /* Fix scrollbar */
+
+.large { display: block; }
+.margin-top { margin-top: 5px!important; }
+.large-margin-top { margin-top: 10px!important; }
+.large-margin-bottom { margin-bottom: 10px!important; }
+
+.xlarge-margin-top { margin-top: 15px!important; }
+.xlarge-margin-bottom { margin-bottom: 15px!important; }
+
+.buttongrid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.buttongrid > :first-child { margin-right: 5px; }
+.buttongrid > :last-child { margin-left: 5px; }
+
+
+.margin-bottom { margin-bottom: 5px!important; }
+
+/* Styling for card lists */
+.button { z-index: 0; position: relative; }
+.listText { width: 700px; }
+/* Advanced styling for list text on smaller screens */
+@media (max-width: 1050px) { 
+	.listText { width: calc(100% - 350px); } 
+	.buttongrid { display: unset; }
+	.buttongrid > :last-child { margin-top: 5px; margin-left: 0; }
+	.buttongrid > :first-child { margin-top: 5px; margin-right: 0; }
+}
+
+@media (max-width: 800px) {
+	.buttons { margin-top: 25px; text-align: center; float: initial; margin-right: 0; }
+	.listElement { text-align: center; display: block; }
+	.listText { width: calc(100% - 140px); text-align: center; }
+}
+
+.button, h2, h1 { line-height: 1.5; }
+
+
+@media (max-width: 750px) {
+	aside .card { max-width: unset; }
+}
+
+/* RESET STYLES!!! */
+*, *::before, *::after { box-sizing: border-box; }
+
+* { margin: 0; }
+/* html, body { height: 100%; } */
+body { line-height: 1; -webkit-font-smoothing: antialiased; }
+
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+#root, #__next { isolation: isolate; }
+
+
+textarea::-webkit-scrollbar { display: unset; }

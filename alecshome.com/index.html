@@ -1,0 +1,80 @@
+<!-- HTML for my personal website at https://alecshome.com: -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <!-- meta for SEO and normal boring web stuff -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> Alec's Home(page) </title>
+        <meta name="description" content="Welcome to my private home on the web! You should visit my more public site at AmazinAxel.com." />
+        <link rel="stylesheet" type="text/css" href="https://amazinaxel.com/style.css" />
+        <link rel="canonical" href="https://amazinaxel.com/" />
+        <meta name="author" content="Alec" />
+        <meta name="copyright" content="Alec" />
+        <meta property="og:locale" content="en, en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Alec&#039;s Home" />
+        <meta property="og:description" content="Alec&#039;s Home is my private home on the web!" />
+        <meta property="og:url" content="https://alecshome.com/" />
+        <meta property="og:site_name" content="Alec&#039;s Home" />
+        <meta property="og:image" content="https://alecshome.com/favicon/favicon.png" />
+		<script> </script> <!-- Fix bug in some browsers that cause animations to start on page load -->
+<style>
+.card-inner {
+	transition: transform 1s cubic-bezier(0.3, 0, 0, 1.2);
+	transform-style: preserve-3d;
+	border-left: 20px solid #28aed7;
+}
+
+.flip-card:target .card-inner { transform: rotateY(180deg); }
+.flip-card:target .card-front, .flip-card:not(:target) .card-back { height: 0; opacity: 0; }
+h1 { margin: 0; margin-bottom: 16px; }
+
+.card-front, .card-back { 
+	backface-visibility: hidden; 
+	opacity: 1; 
+	transition: height 0.8s cubic-bezier(0.3, 0, 0, 1), opacity 0.3s cubic-bezier(0.3, 0, 0, 1.2); 
+}
+
+.card-back { transform: rotateY(180deg); height: 270px; }
+.card-front { height: 250px; }
+	
+.buttonfront { position: absolute; right: 10px; bottom: 10px; }
+.buttonback { position: absolute; left: -10px; bottom: -10px; }
+	
+	@media (max-width: 1500px) {
+		.visitAmazinAxel { display: none; }	
+		.button { right: 5px; bottom: -40px; display: block; position: relative; }
+	}
+
+</style>
+</head>
+<body>
+    <h1>This site is now outdated! If you're seeing this, then something went wrong!</h1>
+    <h3>Try reloading the page or clicking <a href="https://alecshome.com">this URL.</a> You should see a list of recent blog posts.</h3>
+<div class="flip-card" id="flipped">
+  <div class="card-inner card">
+    <div class="card-front">
+		<h1> Welcome to my (online) home! </h1>
+		<p> This is where I seperate my back-end services and applications from my front-end things, such as my <a href="https://amazinaxel.com">AmazinAxel.com site.</a></p>
+		<br>
+		<p> This site is used to host personal APIs used for my various projects. This site is also used for development purposes, and has an invite-only development site for testing upcoming projects. </p>
+		<br>
+		<p> I don't post any updates or blog posts here. If you want to see that kind of stuff, visit my <a href="https://amazinaxel.com">blog</a> or see my <a href="https://amazinaxel.com/swr/">weekly SWR posts</a> where I post about what I've been working on every week! </p>
+		<br>
+		<p> Click the "More Info" button for links to the Privacy Policy and for more information about the purpose of this site. </p>
+		<a href="#flipped" class="button buttonfront"> More Info </a>
+		<a href="https://amazinaxel.com" class="visitAmazinAxel" style="position: absolute; right: 115px; bottom: 19px;"> Visit AmazinAxel.com </a>
+    </div>
+    <div class="card-back">
+      <h1> What's this domain used for? </h1> 
+		<p> Because I already own the site <a href="https://amazinaxel.com">AmazinAxel.com</a>, why would I register and create another personal website? Well, having a seperate domain helps to keep things more secure, as I can have my developer site and restricted APIs hosted on AlecsHome.com rather than the AmazinAxel.com domain, which is more public. Additionally, I like to keep my sites organized and I have found that seperating the domains really helps. There are many other reasons for keeping this domain name, such as the fact that it includes my (actual) name in it which makes it much more personal and recognizable for emails and more personal content.</p>
+		<h2> Are there any future plans for this domain and site? </h2>
+		<p> As of now, I don't have any plans of moving any public-facing content (like my weekly SWR's) from my AmazinAxel domain to this one. I also will continue to keep my backend applications on here to keep things secure. This site will continue to gain more features (like dev testing for future projects) but won't overtake the AmazinAxel site on public-facing content. </p> 
+		<a href="https://amazinaxel.com" class="visitAmazinAxel" style="position: absolute; left: 95px; bottom: 0px;"> Visit AmazinAxel.com </a>
+		<a href="https://amazinaxel.com/privacy-policy" style="position: absolute; right: 0; bottom: 0px;"> View my Privacy Policy </a>
+		<a href="#" class="button buttonback"> Go Back </a>
+    </div>
+  </div>
+</div>
+</body>

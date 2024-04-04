@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<!--
+
+
+*/---------\*  HTML Pages for my control panel (AlecsCP)
+ | H T M L |   Copyright (c) 2021 - 2022 AmazinAxel (Alec)
+*\_________/*  All Rights Reserved. For use only by AmazinAxel.
+
+-->
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { background: #eaeafa; }
+.loader {
+	border: 16px solid #f1f1fc;
+    border-radius: 50%;
+    border-top: 16px solid #888;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s cubic-bezier(0.7, -0.2, 0.2, 1.1) infinite;
+    box-shadow: 0 0 6px 0 #dddddd;
+    margin: auto;
+}
+
+@keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(720deg); }
+}
+
+
+h2 {
+    animation: blink 2s cubic-bezier(0.6, 0.3, 0.6, 1) infinite;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+@keyframes blink {
+  0% { color: #999; }
+  50% { color: #000; }
+  100% { color: #999; }
+}
+
+</style>
+</head>
+<body>
+<div class="loader"></div>
+<h2> Loading... </h2>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<?php $old_date = "2023-05-19"; $quote = "\"Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.\" -Albert Einstein"; ?>

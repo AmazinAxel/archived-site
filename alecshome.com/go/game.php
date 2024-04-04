@@ -1,0 +1,1 @@
+<?php header("Location: https://alecshome.com?ref=discord"); exit; ?>

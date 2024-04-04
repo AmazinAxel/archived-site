@@ -1,0 +1,8 @@
+Header add X-Robots-Tag "noindex"
+#remove the need for .php extention 
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.+)$ $1.php [L]
