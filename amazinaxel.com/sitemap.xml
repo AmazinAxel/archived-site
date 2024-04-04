@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+<!-- Homepage -->
+<loc>https://amazinaxel.com</loc>
+</url>
+<url>
+<!-- SWR Index -->
+<loc>https://amazinaxel.com/swr</loc>
+</url>
+<url>
+<!-- Privacy Policy / Cookie Policy -->
+<loc>https://amazinaxel.com/privacy-policy</loc>
+</url>
+<url>
+<!-- About Me -->
+<loc>https://amazinaxel.com/about-me</loc>
+</url>
+<url>
+<!-- Projects -->
+<loc>https://amazinaxel.com/projects</loc>
+</url>
+<url>
+<!-- Bubble Tea Blog -->
+<loc>https://amazinaxel.com/boba</loc>
+</url>
+<url>
+<!-- WizardryKB Homepage -->
+<loc>https://amazinaxel.com/WizardryKB</loc>
+</url>
+<url>
+<!-- AmazinAxel's Lofi Player -->
+<loc>https://amazinaxel.com/lofi</loc>
+</url>
+</urlset>
+
+
+<!--  If you are a human visitor, you should probably head back to my homepage at https://amazinaxel.com  -->
+<!--  This page is intended for robots to help index my site so I can appear further in search rankings.  -->

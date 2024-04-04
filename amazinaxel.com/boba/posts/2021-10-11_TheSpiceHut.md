@@ -1,0 +1,2 @@
+# The Spice Hut (Bellingham)
+The Spice Hut is near Meridian in Bellingham, Washington</a> and is another really good boba place in Bellingham. It has some decent boba pearls, but they really specialize in that tea. The tea is amazing, but its not traditional tea. You have to find the right flavors and mix the right ones together and it will taste <em>amazing</em>. I definitely would rate it a good 7 out of 10 boba pearls as well, since they always ran out of my favorite toppings when we go there!

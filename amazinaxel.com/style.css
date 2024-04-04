@@ -1,0 +1,374 @@
+/* Unminified CSS styles for my website: https://amazinaxel.com */
+/*     Copyright (c) AmazinAxel 2021 | All Rights Reserved!     */
+
+/* body css */
+body {
+  margin: auto;
+  max-width: 1000px;
+  padding: 20px;
+  background: #eaeafa;
+  font-family: 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
+}
+
+/* sidebar / main content layout */
+.row {
+  display: grid;
+  grid-template-columns: auto max-content;
+  grid-column-gap: 10px;
+}
+
+/* images */
+img {
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+}
+
+/* cards */
+.card {
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #f1f1fc;
+  box-shadow: 0 1px 3px 0 #c3c3c3;
+}
+
+/* header */
+header {
+  padding: 10px 30px 30px 30px;
+  border-radius: 20px 20px 20px 20px;   
+  background-color: #f1f1fc;
+  box-shadow: 0 1px 3px 0 #c3c3c3;
+}
+
+/* footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #f1f1fc;
+  box-shadow: 0 1px 3px 0 #c3c3c3;
+}
+
+/* navigation bar */
+.navbar {
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: #f1f1fc;
+  box-shadow: 0 0 6px 0 #dddddd;
+}
+
+/* navbar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 20px;
+  transition: background 0.2s;
+  border-radius: 15px;
+}
+
+/* links */
+a { color: black; }
+footer a:hover, aside a:hover { text-decoration: underline; }
+footer a:hover, aside a:active { text-decoration: unset; color: #606060; }
+
+
+/* set subtitle / title size */
+h2 { font-size: 1em; }
+h1 { font-size: 1.5em; }
+
+/* navbar right float */
+.navbar a.right { float: right; }
+
+/* header text */
+.headtxt {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin:15px;
+}
+
+/* site description text */
+.infotxt {
+  display: block;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 100;
+}
+
+/***** fix things *****/
+
+/* make sidebar content text bigger */
+ul { padding: 0; font-size: 17px;}
+
+/* make sidebar title font smaller (for accessibility) */
+.card > h1 { font-size: 1.1em; }
+
+/* fix the inconsistent headers for index pages */
+h1 a { font-size: 1.3em; }
+
+/* fix paragraph glitch */
+p, span {
+  margin: 0;
+  overflow-wrap: break-word;
+  color: #3a3a3a;
+  display: block;
+}
+/* fix iframe borders */
+iframe{ border: none; }
+
+/* remove underline for everything except main content */
+header a, aside a, footer a, .navbar a, .button a { text-decoration: none; }
+
+/* remove sidebar bullets and add padding */
+li {
+  list-style-type: none;
+  padding-bottom: 6px;
+  margin: 8px;
+}
+
+/* fix transition on page load
+.fixtransition * {
+  transition: none!important;
+} */
+
+
+/* fix layout bug for small pages */
+html { overflow-y: scroll; }
+
+/***** website features *****/
+/* tooltip */
+.tooltip { position: relative; display: inline-block; border-bottom: 2px dotted black; }
+.tooltip .tooltiptext {
+    opacity: 0;
+    transition: opacity .3s, visibility .3s, transform .3s;
+    padding: 10px;
+    border-radius: 10px 7px 7px 10px;
+    background-color: #f6f6fd;
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    transform: translate(-50%, -40%);
+    overflow: auto;
+    text-align: center;
+    visibility: hidden;
+    cursor: text;
+    max-height: 75px;
+}
+.tooltiptext::-webkit-scrollbar-thumb { border-radius: 0 5px 5px 0; }
+.tooltip:hover .tooltiptext { opacity: 1; visibility: visible; transform: translate(-50%, -50%); }
+.tooltip:hover {cursor: pointer;}
+
+/** buttons **/
+/* button:hover { box-shadow: 0 0 10px 1px #ddd; cursor: pointer; }
+button:active { background-color: #f1f1fc; box-shadow: 0 1px 3px 0 #c3c3c3; }
+button { 
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+    background-color: #f6f6fd;
+    text-decoration: none;
+    border: 0;
+    font-size: 15px;
+    padding: 10px 15px 10px 15px;
+} */
+
+.button:hover, button:hover { box-shadow: 0 0 10px 1px #ddd; cursor: pointer; }
+.button:active, button:active { background-color: #f1f1fc; box-shadow: 0 1px 3px 0 #c3c3c3; }
+.button, button { 
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+    background-color: #f6f6fd;
+    text-decoration: none;
+    border: 0;
+    font-size: 15px;
+    padding: 10px 15px 10px 15px;
+}
+
+/* fix styling for anchor buttons within a grid (such as the Projects page grid) */
+.grid-container > .card > a.button, .large.button { display: block; margin-bottom: 13px; }
+
+/* dropdowns */
+#dropdown { display: none; }
+#dropdown:target { display: block; }
+#dropdown + ul.controls .hide, #dropdown:target + ul.controls .show { display: none; }
+#dropdown:target + ul.controls .hide, #dropdown + ul.controls .show { display: inline-block; }
+
+/* lines to seperate content */
+hr {
+  border: none;
+  height: 0.1px;
+  background-color: #bdbdbd;
+  box-shadow: 0 1px 3px 0 #c3c3c3;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+ ::-webkit-scrollbar-corner { background: #f6f6fd; }
+::-webkit-scrollbar-track { background: #f6f6fd; border-radius: 10px; }
+::-webkit-scrollbar-thumb {
+  background: #fdfdfd;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 #c3c3c3;
+}
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 1px 6px 0 #c3c3c3;
+} 
+
+/* sticky sidebar */
+aside .card:last-child { top: 240px; }
+aside .card {
+  position: sticky;
+  top: 15px;
+  max-width: 160px;
+}
+
+/** popups **/
+.pop .popupbackground { /* modal styling */
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	bottom: 0;
+    transition: opacity 350ms ease, visibility 350ms ease, background 350ms cubic-bezier(0, 0, 0.5, 1);
+}
+
+.pop .modal { /* modal styling */
+    transform: translate(-50%, -50%) scale(0);
+    left: 50%;
+    width: 750px;
+    position: absolute;
+    border-radius: 20px;
+    background-color: #f1f1fc;
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+    padding: 45px 15px 35px 15px;
+    transition: transform 200ms cubic-bezier(0, 0, 1, 0);
+    top: 50%;
+}
+
+.btn-close{ /* close button style */
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 25px;
+    width: 60px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #f6f6fd;
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+h1:target ~ p { animation: animateTarget 1.5s cubic-bezier(0, 2, 1, 1) }
+@keyframes animateTarget { 0% { position: relative; transform: scale(1.0); } 70% { transform: scale(1.1, 1.02); } 100% { transform: scale(1.0); } } 
+
+.pop input { display: none; } /* hide button */
+.pop input:checked + .popupbackground { opacity: 1; visibility: visible; background: rgba(0, 0, 0, 0.5); } /* transition and open */
+.pop input:checked + .popupbackground .modal { transform: translate(-50%, -50%) scale(1); transition: transform 350ms cubic-bezier(0, 0, 0, 1); } /* animate modal */
+.pop input:checked + .popupbackground label:hover { box-shadow: 0 0 10px 1px #ddd; } /* close button hover */
+.pop input:checked + .popupbackground label:active { background-color: #f1f1fc; box-shadow: 0 1px 3px 0 #c3c3c3; } /* close button clicked */
+
+.pop label.open { color: #000; transition: color 200ms ease-in-out, font-size 200ms ease-in-out; text-decoration: underline; } /* label styles */
+.pop label.open:hover, h1 > a:hover { color: #6d6d6d; cursor: pointer; text-decoration: none; } /* label hover */
+.pop label.open:active, h1 > a:active { color: #222; } /* label being clicked */
+
+/* anchor animations */
+a:hover:not(.navbar > a):not(.navbar > p > a):not(a.button) { color: #606060; } /* anchor hover */
+a:active:not(.navbar > a):not(.navbar > p > a):not(a.button) { color: #222; } /* anchor active */
+
+li > a:active:not(aside a) { font-size: 16px; color: #222; } /* anchor being clicked */
+/* a:active:not(.navbar > a):not(.navbar > p > a):not(h1 > a):not(a.infotxt):not(a.button) { font-size: 16px; color: #222;} anchor being clicked */
+
+a { transition: color 350ms cubic-bezier(0, 0, 0, 1), font-size 100ms ease-in-out; }
+
+
+/***** 2 row styling *****/
+
+/* .left { grid-area: left; } */
+.rightside { grid-area: rightside; }
+
+.grid-container {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 0 15px;
+  
+}
+.grid-container > .card { flex: 40%; }
+
+@media screen and (max-width: 600px) {
+	.grid-container {
+		display: unset;
+	}
+}
+
+/***** ^ 2 row styling *****/
+
+/* navbar hover */
+.navbar a:hover {
+   background-color: #f6f6fd;
+   box-shadow: 0 0 6px 0 #ddd;
+}
+
+/* navbar click */
+.navbar a:active {
+   background-color: #f1f1fc;
+   box-shadow: 0 0 4px 0 #ddd;
+}
+
+
+/***** responsiveness *****/
+
+@media(max-width: 1100px) {
+    /* fix tooltip bug on smaller screens*/
+   .tooltip:hover .tooltiptext { transform: unset; }
+   .tooltip .tooltiptext {
+    position: fixed;
+    left: 0;
+    width: calc(100% - 42px);
+    margin: 10px;
+    top: 5px;
+    transform: translate(0%, -50%);
+    max-height: max-content;
+    z-index: 1;
+   }
+}
+
+/* full width for screens less than 800px */
+@media (max-width: 800px) {
+  .leftcolumn, aside {
+    width: 100%;
+    padding: 0;
+   }
+}
+
+/* move sidebar to bottom for responsiveness */
+@media (max-width: 750px) {
+  .row{ display: unset; }
+  aside .card{ position: unset; max-width: unset; }
+}
+
+/* fix sidebar when the height is small */
+@media (max-height: 540px) {
+  aside .card:first-child { position: unset; }
+  aside .card:last-child { top: 15px; }
+}
+
+/* fix navbar on smaller screens and make responsive for screens less than 550px */
+@media (max-width: 550px) {
+  body { padding: 10px 4px; }
+  .navbar a, .navbar a.right { float: initial; }
+}
+@media (max-width: 800px) { .pop .modal { width: 90vw;  } } /* modal fill screen */ 

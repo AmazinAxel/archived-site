@@ -1,0 +1,110 @@
+body{font-family: sans-serif;}
+
+input, .errorbtn{
+    padding: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: #f1f1fc;
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+    border: 0px;
+    background-color: #f6f6fd;
+    box-shadow: 0 0 6px 0 #ddd;
+    transition: box-shadow 0.3s;
+    text-indent: 5px;
+}
+
+.card {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #f6f6fd;
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+}
+
+textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: rgb(246, 246, 253);
+    box-shadow: rgb(221 221 221) 0px 0px 6px 0px;
+    width: 331px;
+    transition: box-shadow 0.3s;
+    resize: vertical;
+    min-height: 120px;
+}
+
+textarea:focus-visible {
+    outline: 0;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: rgb(221 221 221) 0px 0px 11px 1px;
+}
+
+input:focus-visible {
+    outline: 0;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: rgb(221 221 221) 0px 0px 11px 1px;
+}
+
+/* .numInput {
+    width: 25px; 
+    text-align: center; 
+    text-indent: 0;
+} */
+
+iframe { box-shadow: 0 1px 3px 0 #c3c3c3; } /* Cloudflare Captcha styling */
+
+h2 { text-align: center; }
+
+input[name=website] { /* hide trap 1 field with display property */ display: none; }
+input[name=state] { /* hide trap 2 with visibility in case a bot recognizes the previous */
+    visibility: hidden;
+    padding: 0px;
+    margin: 0px;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+}
+
+
+
+.button, .errorbtn { 
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-indent: 0;
+    font-size: 15px;
+    padding: 14px;
+}
+
+.button:hover, .errorbtn:hover {
+    box-shadow: 0 0 10px 1px #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.button:active, .errorbtn:active {
+    background-color: #f1f1fc;
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.errorbtn{ margin: auto; display: block; }
+
+/** SCROLLBAR **/
+
+/* width */
+::-webkit-scrollbar { width: 10px; border-radius: 4px; height: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track { background: #f1f1fc; }
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #f6f6fd;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 #c3c3c3;
+}
+
+/* Handle hover */
+::-webkit-scrollbar-thumb:hover { box-shadow: 0 1px 6px 0 #c3c3c3; }
+
+ ::-webkit-scrollbar-corner { background: #f1f1fc; }

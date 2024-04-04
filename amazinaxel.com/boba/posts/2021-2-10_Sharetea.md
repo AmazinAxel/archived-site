@@ -1,0 +1,2 @@
+# Sharetea (Portland)
+ One of the first places which got me really hooked on boba is right here next to our old home in the suburbs of Portland, Oregon. The place is called Sharetea and is still one of my favorite and well rated places for getting boba and bubble tea. We went to the one in the suburbs in Portland, Oregon and another location we went to was in the (very far away) suburbs of Seattle, Washington, <a href="https://goo.gl/maps/sk8WQ3Ae8tRkzoCh8">and the exact location can be found here</a>. (10 out of 10 boba pearls)

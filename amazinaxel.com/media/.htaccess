@@ -1,0 +1,20 @@
+# set cache control header
+Header set Cache-Control "max-age=1800000, public"
+
+# set header
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options nosniff
+</IfModule>
+
+# set mime type
+<IfModule mod_mime.c>
+    AddType application/manifest+json                   webmanifest
+    AddType video/mp4                                   mp4
+    AddType video/webm                                  webm
+</IfModule>
+
+# set default charset 
+AddDefaultCharset utf-8
+
+# remove indexing
+Options All -Indexes
